@@ -8,14 +8,6 @@ A 'paper-like' calculator with various basic and high-level functions, displayab
 
 Open index.html on a browser.
 
-## Contributing
-
-Any bugs or suggestions, please email mikhail.datoo@mtsn.org.uk.
-
-## Help
-
-If you require assistance, please contact me at mikhail.datoo@mtsn.org.uk.
-
 ## Installation
 
 ### Requirements
@@ -29,14 +21,6 @@ Unzip the file and run index.html.
 ### Configuration
 
 None.
-
-## Credits
-
-Mikhail Datoo - Project Author.
-
-## Contact
-
-Contact me at mikhail.datoo@mtsn.org.uk.
 
 ## License
 
