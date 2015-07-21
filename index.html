@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/favicon.png">
+    <title>Calculator</title>
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="template.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">The Calculator Project</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="features.html">Calculator</a></li>
+                  <li><a href="features.html">Features</a></li>
+                  <li><a href="bindings.html">Keyboard Shortcuts</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+              <canvas id="calc" width="600" height="400" style="border:2px solid #c3c3c3;">
+                  Unfortunately your browser does not support the canvas element. Please update your browser or install another one (like Chromium, Firefox, Chrome or Internet Explorer) if your browser does not support HTML canvas.
+              </canvas>
+              <div class="bs-example" data-example-id="vertical-button-group">
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('RadDeg')><span id='RadDeg'>Deg</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('sin')><span id='sin'>sin</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('(')>(</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('^')>^</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('Del')>Del</button>
+                </div>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('tan')><span id='tan'>tan</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('cos')><span id='cos'>cos</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker(')')>)</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('root')>√</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('Canc');><span id='canc'>Canc</span></button>
+                </div>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('|')><span id='c'>C</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(7)><span id='seven'>7</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(4)><span id='four'>4</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(1)><span id='one'>1</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('.')>.</button>
+                </div>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('Bin')><span id='bin'>Bin</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(8)><span id='eight'>8</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(5)><span id='five'>5</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(2)><span id='two'>2</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(0)>0</button>
+                </div>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('Oct')><span id='oct'>Oct</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(9)><span id='nine'>9</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(6)><span id='six'>6</span></button>
+                  <button type="button" class="btn btn-default nums" onclick=clicker(3)><span id='three'>3</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('%')>%</button>
+                </div>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('Dec')><span id='dec'>Dec</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('!')>!</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('-')>-</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('/')>÷</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('Ans')>Ans</button>
+                </div>
+              <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                  <button type="button" class="btn btn-default" onclick=clicker('Hex')><span id='hex'>Hex</span></button>
+                  <button type="button" class="btn btn-default" onclick=clicker('Rand')>Rand</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('+')>+</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('*')>x</button>
+                  <button type="button" class="btn btn-default" onclick=clicker('pi')>π</button>
+                </div>
+                <div class="btn-group-vertical" role="group" aria-label="Vertical button group">
+                    <button type="button" class="btn btn-default functions large" id="Shift" onclick=clicker('Shift')>Shift</button>
+                    <button type="button" class="btn btn-default functions large" id="Store" onclick=clicker('Store')>Store</button>
+                    <button type="button" class="btn btn-default large" onclick=clicker('=')>=</button>
+                </div>
+              </div>
+          </div>
+          <div class="mastfoot">
+            <div class="inner">
+              <p>By Mikhail Datoo</p>
+              <br>
+              <p>Best with Chrome</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/bootstrap/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="code.js"></script>
+  </body>
+</html>

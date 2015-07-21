@@ -1,0 +1,49 @@
+#calc {
+    border-radius: 5px;
+    padding: 25px; 
+    margin-bottom: 5px;
+}
+
+.nums {
+    background-color: #00ff14;
+    border-color: #00ffa9;
+}
+
+.nums:hover {
+    background-color: #00ffa7;
+    border-color: #00ffa9;
+}
+
+.nums:focus {
+    background-color: #00ff14;
+    border-color: #00ffa9;
+}
+
+.functions {
+    background-color: #ffce00;
+    border-color: #ffe200;
+}
+
+.functions:hover {
+    background-color: #ffff00;
+    border-color: #ffe200;
+}
+
+.functions:focus {
+    background-color: #ffce00;
+    border-color: #ffe200;
+}
+
+.large {
+    height: 59px !important;
+}
+
+.lleft {
+    text-align: left;
+    margin-left: 10px;
+}
+
+.rright {
+    text-align: left;
+    margin-right: 10px;
+}
